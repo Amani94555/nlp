@@ -4,7 +4,7 @@ import { nameChecker } from './js/nameChecker'
 
 
 
-// alert("I EXIST")
+ alert("I EXIST")
 // console.log("CHANGE!!");
 
 const form = document.getElementById('urlForm');
