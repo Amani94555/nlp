@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Test</title>
+    <link rel="stylesheet" href="dist/main.css">
+
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            Logo
+        </div>
+        <div class="navigation">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <form id="weburlForm">
+                <input id="weburlInput" type="text" name="url" placeholder="Enter URL" required>
+                <button id="weburlSubmitButton" type="submit">Submit</button>
+            </form>
+        </section>
+
+
+        <section>
+            <strong>Form Results:</strong>
+            <div id="weburlResults"></div>
+            <div id="Polarity"></div>
+            <div id="Subjectivity"></div>
+            <div id="Text Snippet"></div>
+        </section>
+    </main>
+
+
+    <footer>
+        <p>Created by <strong>Amani</strong></p>
+    </footer>
+
+    <script>
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+    </script>
+</body>
+
+</html>
